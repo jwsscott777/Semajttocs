@@ -1,7 +1,19 @@
 #!/usr/bin/env node
-const clearConsole = require('clear-any-console');
+const welcome = require('cli-welcome');
+const pkgJSON = require('./package.json');
 
-clearConsole();
+welcome({
+title: pkgJSON.name,
+tagLine: `Welcome from Semajttocs`,
+description: pkgJSON.description,
+bgColor: `	#AAFF00`,
+    color: `#000000`,
+    bold: true,
+    clear: true,
+version: pkgJSON.version
+});
+
+
 
 console.log(`
 Semajttocs

@@ -1,11 +1,12 @@
 {
     "name": "semajttocs",
     "version": "1.0.1",
+    "description": "Get know Semajttocs via `npx semajttocs`",
     "bin": {
         "semajttocs": "index.js"
     },
     "dependencies": {
-        "clear-any-console": "^1.16.2",
+        "cli-welcome": "^2.2.2",
         "emoji-log-vscode": "^1.0.0"
     }
 }
