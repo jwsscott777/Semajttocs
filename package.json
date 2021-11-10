@@ -5,6 +5,7 @@
         "semajttocs": "index.js"
     },
     "dependencies": {
-        "clear-any-console": "^1.16.2"
+        "clear-any-console": "^1.16.2",
+        "emoji-log-vscode": "^1.0.0"
     }
 }
