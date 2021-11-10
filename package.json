@@ -1,6 +1,6 @@
 {
     "name": "semajttocs",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Get know Semajttocs via `npx semajttocs`",
     "bin": {
         "semajttocs": "index.js"
