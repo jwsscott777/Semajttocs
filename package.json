@@ -8,5 +8,10 @@
     "dependencies": {
         "cli-welcome": "^2.2.2",
         "emoji-log-vscode": "^1.0.0"
-    }
+    },
+    "keywords": [
+        "james scott",
+        "semajttocs",
+        "Semajttocs"
+    ]
 }
