@@ -13,5 +13,13 @@
         "james scott",
         "semajttocs",
         "Semajttocs"
-    ]
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "repository": "jwsscott777/semajttocs",
+    "author": {
+        "name": "James Scott",
+        "email": "tlmsols50@gmail.com",
+        "url": "https://twitter.com/@Semajttocs777"
+    }
 }
