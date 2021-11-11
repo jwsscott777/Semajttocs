@@ -1,21 +1,12 @@
 #!/usr/bin/env node
-const welcome = require('cli-welcome');
-const pkgJSON = require('./package.json');
 const alert = require('reuse-alerts');
 const chalk = require('chalk');
 const log = console.log;
+const init = require('./utils/init');
 
-welcome({
-title: `Semajttocs`,
-tagLine: ` Semajttocs is glad your here`,
-description: pkgJSON.description,
-bgColor: `	#6937ff`,
-    color: `#000000`,
-    bold: true,
-    clear: true,
-version: pkgJSON.version
-});
 
+(() => {
+    init();
 
 
 log(`${chalk.italic(`A developer and content creator. I prefer Javascript and Swift. 
@@ -29,3 +20,5 @@ work and Swift for my Apple devices.` )}
 `);
 
 alert({type: 'info', msg: `You can also reach me at: tlmsols50@gmail.com`});
+
+})();
