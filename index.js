@@ -25,3 +25,7 @@ work and Swift for my Apple devices.` )}
  ${chalk.hex(`#1da1f2`).inverse(` TWITTER `)} ${chalk.greenBright(`https://twitter.com/@Semajttocs777`)}
 
 `);
+
+log(`
+
+`)
