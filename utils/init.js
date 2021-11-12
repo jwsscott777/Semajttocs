@@ -1,6 +1,7 @@
 const welcome = require('cli-welcome');
 const pkgJSON = require('./../package.json');
-module.exports = (minimal) => {
+const box = require('boxen');
+module.exports = (minimal, clear) => {
     !minimal &&
         welcome({
             title: `Semajttocs`,
@@ -9,8 +10,8 @@ module.exports = (minimal) => {
             bgColor: `	#6937ff`,
             color: `#000000`,
             bold: true,
-            clear: true,
+            clear,
             version: pkgJSON.version
         });
-        minimal && console.log(`Semajttocs`);
+        minimal && console.log(box(`Semajttocs`, {padding: 1, float: `center`, dimBorder: true}));
 }
