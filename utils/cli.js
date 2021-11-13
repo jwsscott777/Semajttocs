@@ -1,65 +1,62 @@
 const meow = require('meow');
+const meowHelper = require('cli-meow-help');
 const { green, yellow, cyan, dim } = require('chalk');
 
-const helpText = `
-    Usage
-	  ${green(`npx semajttocs`)} ${yellow(`[--option]`)} ${cyan(`<command>`)}
+const commands = {
+    help: {
+        desc: `Print the help info`
+    },
+}
+const flags = {
+    ad: {
+        type: `boolean`,
+        default: true,
+        desc: `Prints the ad`,
+    },
+    bio: {
+        type: `boolean`,
+        default: true,
+        desc: `Prints the bio`,
+    },
+    clear: {
+        type: `boolean`,
+        default: true,
+        desc: `Clears above the data`
+    },
+    debug: {
+        type: `boolean`,
+        default: false,
+        alias: `d`,
+        desc: `Prints debug info`
+    },
+    minimal: {
+        type: `boolean`,
+        default: false,
+        alias: `m`,
+        desc: `Prints minimal info`,
+    },
+    social: {
+        type: `boolean`,
+        default: true,
+        desc: `Prints social media links`,
+    },
+    version: {
+        type: `boolean`,
+        default: false,
+        alias: `v`,
+        desc: `Prints the version of the cli`
+    }
+};
+const helpText = meowHelper({
+    name: `npx semajttocs`,
+    flags,
+    commands
+});
 
-	Options
-    ${yellow(`--bio`)}          Show bio info ${dim(`(Default: true)`)}
-    ${yellow(`--no-bio`)}       Don't show bio
-	${yellow(`--social`)}       Show social info ${dim(`(Default: true)`)}
-    ${yellow(`--no-social`)}    Don't show social
-    ${yellow(`--ad`)}           Show ad info ${dim(`(Default: true)`)}
-    ${yellow(`--no-ad`)}        Don't show ad info
-    ${yellow(`--clear`)}        Clear console ${dim(`(Default: true)`)}
-    ${yellow(`-d, --debug`)}    Print debug info
-    ${yellow(`--version, -v`)}  Show version
-
-    Commands
-    ${cyan(` help `)}           Show help
-      
-    
-	Examples
-	${green(` npx semajttocs`)} --no-social
-
-`;
 
 const options = {
-    flags: {
-        minimal: {
-            type: `boolean`,
-            default: false,
-            alias: `m`,
-        },
-        clear: {
-            type: `boolean`,
-            default: true,
-        },
-        bio: {
-            type: `boolean`,
-            default: true
-        },
-        social: {
-            type: `boolean`,
-            default: true
-        },
-        ad: {
-            type: `boolean`,
-            default: true
-        },
-        debug: {
-            type: `boolean`,
-            default: false,
-            alias: `d`
-        },
-        version: {
-            type: `boolean`,
-            default: false,
-            alias: `v`
-        },
-        
-    }
+    flags,
+       
 };
 module.exports = meow(helpText, options);
 
